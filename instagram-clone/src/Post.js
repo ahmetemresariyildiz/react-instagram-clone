@@ -7,6 +7,9 @@ import { db, auth } from './firebase';
 function Post({postId,username,caption,imageUrl}) {
   const [comments, setComments] = useState([]);
 const [comment, setComment] = useState([]);
+const postComment = (event) => {
+
+}
 useEffect(() => {
   let unsubscribe;
   if (postId) {
@@ -36,6 +39,9 @@ useEffect(() => {
         </div>
         <img className='post__image'src={imageUrl}alt=""></img>
         <h4 className='post__text'><strong>{username}  </strong> {caption}</h4>
+    
+    
+    
     </div>
   )
 }
